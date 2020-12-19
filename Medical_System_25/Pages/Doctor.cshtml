@@ -1,0 +1,48 @@
+﻿@page "{Id?}"
+@model Medical_System.Pages.DoctorModel
+@using Medical_System.Models
+@{ ViewData["Titel"] = Model.doctor.Name + " " + Model.doctor.LastName; }
+<div id="message"></div>
+<div class="container">
+    <main role="main" class="pb-3">
+        <div>
+            <h2> @Model.doctor.LastName @Model.doctor.Name</h2>
+            <div class="container-fluid">
+                <div class="row">
+
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="~/image/lol.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">
+                                @Model.doctor.personalization   <br /> @Model.doctor.hospital_name
+                            </p>
+                            <form method="post">
+                                <buton name="zapis" asp-page-handler="Zappis" onclick="Add('@Model.doctor.Id', 'zappis')" class="btn btn-primary"> @Model.Messege
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<table class="table">
+    <tr><td>Чат</td></tr>
+    @foreach (Chat chat in Model.chats)
+    {
+<tr>
+    <td>@chat.name</td>
+    <td>@chat.Text</td>
+    <td>@chat.Date</td>
+</tr>}
+</table>
+<div class=" position-relative" style="margin-left: 30%">
+    <form class="form-inline" method="post">
+        <input name="text" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light  my-2 my-sm-0" asp-page-handler="GreaterThan" type="submit">Search</button>
+    </form>
+</div>

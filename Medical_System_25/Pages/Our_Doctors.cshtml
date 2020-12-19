@@ -1,0 +1,36 @@
+﻿@page
+@model Medical_System.Pages.Our_DoctorsModel
+
+@using Medical_System.Models
+
+<div class="del">
+    
+    <div>
+        <h2>Список наших специалистов</h2>
+        <div class="container-fluid">
+            <div class="row">
+                @foreach (Doctor sale in @Model.Doctors)
+                {
+                    <div class="card" style="width: 18rem;">
+                        <img src="/image/lol.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@sale.Name @sale.LastName</h5>
+
+                            <p class="card-text">
+                                Специальность: @sale.personalization
+                                <br /> Название больницы:@sale.hospital_name
+                                <br />Адрес больницы:@sale.location_hospital
+                            </p>
+                            <a class="btn btn-primary" href=@Url.Page("./Doctor",new{sale.Id})>Записаться к врачу</a>
+                        </div>
+                    </div>
+
+                }
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>

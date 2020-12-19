@@ -1,0 +1,13 @@
+﻿@page
+@model Medical_System.Pages.UsersModel
+@using Medical_System.Models
+
+<legend>Контактная информация</legend>
+<p>Имя @Model.Person.Name</p>
+<p>Фамилия @Model.Person.LastName</p>
+<p>login @Request.Cookies["login"]</p>
+
+
+<form method="post">
+    <button type="submit"> Выйти</button>
+</form>
