@@ -1,0 +1,23 @@
+﻿@page
+@model Sportmag.Pages.UserModel
+@using Sportmag.Models
+<div class="container">
+
+    
+            <legend>Контактная информация</legend>
+            <p>Имя @Model.GetPerson.Name</p>
+            <p>Фамилия @Model.GetPerson.SeName</p>
+            <p>login @Request.Cookies["login"]</p>
+
+       
+       <form method="post">
+           <button type="submit"> Выйти</button>
+       </form>
+
+       
+    
+
+
+
+
+</div>

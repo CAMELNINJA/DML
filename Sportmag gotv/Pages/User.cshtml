@@ -1,0 +1,40 @@
+﻿@page
+@model Sportmag.Pages.UserModel
+@using Sportmag.Models
+<div class="container">
+
+
+    <legend>Контактная информация</legend>
+    <p>Имя @Model.GetPerson.Name</p>
+    <p>Фамилия @Model.GetPerson.SeName</p>
+    <p>login @Request.Cookies["login"]</p>
+
+
+    <form method="post">
+        <button type="submit"> Выйти</button>
+    </form>
+
+    @if ((Request.Cookies["id"] != null)&&(Model.baskets.Count!=0))
+    {
+        <table class="table">
+            <tr><td>Купить</td></tr>
+            @foreach (Sale chat in Model.sale)
+            {
+                <tr>
+                    <td>@chat.Name</td>
+                    <td>@chat.Price</td>
+                    <td>@chat.Kind_of_sport</td>
+                </tr>
+            }
+        </table>
+        
+            <form class="form-inline" method="post">
+                <button class="btn btn-primary  my-2 my-sm-0" asp-page-handler="Buy" type="submit">Купить</button>
+            </form>
+       
+    }
+
+
+
+
+</div>
