@@ -1,0 +1,9 @@
+D:\User\Desktop\semesterWork-main\DAL_carshop\obj\Debug\netcoreapp3.1\DAL_carshop.AssemblyInfoInputs.cache
+D:\User\Desktop\semesterWork-main\DAL_carshop\obj\Debug\netcoreapp3.1\DAL_carshop.AssemblyInfo.cs
+D:\User\Desktop\semesterWork-main\DAL_carshop\obj\Debug\netcoreapp3.1\DAL_carshop.csproj.CoreCompileInputs.cache
+D:\User\Desktop\semesterWork-main\DAL_carshop\bin\Debug\netcoreapp3.1\DAL_carshop.deps.json
+D:\User\Desktop\semesterWork-main\DAL_carshop\bin\Debug\netcoreapp3.1\DAL_carshop.dll
+D:\User\Desktop\semesterWork-main\DAL_carshop\bin\Debug\netcoreapp3.1\DAL_carshop.pdb
+D:\User\Desktop\semesterWork-main\DAL_carshop\obj\Debug\netcoreapp3.1\DAL_carshop.dll
+D:\User\Desktop\semesterWork-main\DAL_carshop\obj\Debug\netcoreapp3.1\DAL_carshop.pdb
+D:\User\Desktop\semesterWork-main\DAL_carshop\obj\Debug\netcoreapp3.1\DAL_carshop.csprojAssemblyReference.cache

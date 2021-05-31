@@ -1,0 +1,97 @@
+﻿@model DAL_carshop.Models.Car
+@{
+    ViewData["Title"] = "Product";
+}
+
+<div class="product_wrapper">
+    <div class="container">
+        <div class="row">
+            @*<div class="col-md-3 single_left">
+                <div class="block block-layered-nav">
+                    <p class="block-subtitle">Shopping Options</p>
+                    <dl id="narrow-by-list">
+                        <dt class="odd">Price</dt>
+                        <dd class="odd">
+                            <ol>
+                                <li>
+                                    <a href="#"><span class="price">$100.00</span> - <span class="price">$199.99</span></a> (3)
+                                </li>
+                                <li>
+                                    <a href="#"><span class="price">$200.00</span> - <span class="price">$299.99</span></a> (2)
+                                </li>
+                                <li>
+                                    <a href="#"><span class="price">$300.00</span> and above</a> (1)
+                                </li>
+                            </ol>
+                        </dd>
+                        <dt class="odd">Manufacturer</dt>
+                        <dd class="odd">
+                            <ol>
+                                <li>
+                                    <a href="#">Ferrari</a> (1)
+                                </li>
+                                <li>
+                                    <a href="#">Honda</a> (1)
+                                </li>
+                                <li>
+                                    <a href="#">McLaren Mercedes</a> (2)
+                                </li>
+                                <li>
+                                    <a href="#">Renault</a> (1)
+                                </li>
+                            </ol>
+                        </dd>
+                        <dt class="last odd">Color</dt>
+                        <dd class="last odd">
+                            <ol>
+                                <li>
+                                    <a href="#">black</a> (2)
+                                </li>
+                                <li>
+                                    <a href="#">grey</a> (2)
+                                </li>
+                                <li>
+                                    <a href="#">white</a> (2)
+                                </li>
+                            </ol>
+                        </dd>
+                    </dl>
+                </div>
+            </div>*@
+            <div class="col-md-9">
+                <div class="singel_right">
+                    <div class="labout span_1_of_a1">
+                        <img src="~/img/single1.jpg" />
+                    </div>
+                    <div class="cont1 span_2_of_a1">
+                        <h1>@Model.Mark_car @Model.Name_car</h1>
+                        <p class="availability">Availability: <span>In stock</span></p>
+                        <p class="single_price">$@Model.Price_car</p>
+                        <p class="single_desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+                        <div class="quantity">
+                            <div class="prosuct-qty">
+                                <span style=" margin-left: 15px; ">Quantity:</span>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                            <div class="cart_btn">
+                                <a href="" style=" margin-right: 380px; ">Add to Cart</a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-9" style=" margin-top: 35px; ">
+                <div class="toogle">
+                    <h3>Product Details</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

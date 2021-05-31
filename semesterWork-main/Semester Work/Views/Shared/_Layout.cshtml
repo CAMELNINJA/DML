@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Gear - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/bootstrap1337.css" />
+    <link rel="stylesheet" href="~/css/style1337.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+</head>
+<body style="margin: 0px; border: none;">
+    <style>
+    * {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    }
+    </style>
+    <div class="banner">
+        <div class="container">
+            <div class="banner-info">
+                <h1>Team<br />Gear</h1>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh <br />euismod tincidunt ut . </p>
+                <h2 style=" margin-left: 100px; ">Call Us  1.800.123.4568</h2>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="header_bottom">
+            <div class="container">
+                <div class="logo">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="~/img/logo.png" />
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a asp-area="" asp-controller="Shop" asp-action="Index" style=" padding-left: 200px; ">Shop</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cart">
+                    <div class="cssmenu" style=" padding-left: 15px; ">
+                        <ul>
+                            <li class="active">
+                                <a asp-area="" asp-controller="Home" asp-action="Account">Account</a>
+                            </li>
+                            |
+                            <li>
+                                <a asp-area="" asp-controller="Home" asp-action="Login">Log In</a>
+                            </li>
+                            |
+                            <li>
+                                <a asp-area="" asp-controller="Home" asp-action="Register">Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="icon2 sub-icon2">
+                        <li>
+                            <a class="active-icon" asp-area="" asp-controller="Shop" asp-action="Checkout">Shopping Cart:  0 item(s)    $0.00</a>
+                            <ul class="sub-icon2 list">
+                                <li>
+                                    <p>Shopping cart is empty</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        @RenderBody()
+    </div>
+    <div class="footer" style=" height: 396px; ">
+        <div class="container"  style=" margin-left: 650px; ">
+            <div class="footer-grid">
+                <h3>Customer Service</h3>
+                <ul class="list1">
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Contact">Help & Contact</a>
+                    </li>
+                    <li>
+                        <a href="">Shipping & taxes</a>
+                    </li>
+                    <li>
+                        <a href="">Return policy</a>
+                    </li>
+                    <li>
+                        <a href="">Careers</a>
+                    </li>
+                    <li>
+                        <a href="">Affiliates</a>
+                    </li>
+                    <li>
+                        <a href="">Legal Notice</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-grid">
+                <h3>Information</h3>
+                <ul class="list1">
+                    <li>
+                        <a href="">New products</a>
+                    </li>
+                    <li>
+                        <a href="">Top sellers</a>
+                    </li>
+                    <li>
+                        <a href="">Specials products</a>
+                    </li>
+                    <li>
+                        <a href="">Manufacturers</a>
+                    </li>
+                    <li>
+                        <a href="">Suppliers</a>
+                    </li>
+                    <li>
+                        <a href="">Our Stores</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-grid">
+                <h3>My Account</h3>
+                <ul class="list1">
+                    <li>
+                        <a href="">My account</a>
+                    </li>
+                    <li>
+                        <a href="">Personal Information</a>
+                    </li>
+                    <li>
+                        <a href="">Addresses</a>
+                    </li>
+                    <li>
+                        <a href="">Discount</a>
+                    </li>
+                    <li>
+                        <a href="">Orders history</a>
+                    </li>
+                    <li>
+                        <a href="">Your vouchers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div class="container" style=" margin-right: 0px; margin-left: 650px; ">
+            <p class="copy">Copyright © 2021 ahahahaah . All Rights Reserved . Template by <a href="" target="_blank">huy v jope entertainment</a></p>
+        </div>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

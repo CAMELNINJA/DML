@@ -1,0 +1,124 @@
+﻿@using DAL_carshop.Models;
+@model List<Car>
+@{
+    ViewData["Title"] = "Shop";
+}
+
+
+<div class="product_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 single_left">
+                <div class="block block-layered-nav">
+                    <p class="block-subtitle">Shopping Options</p>
+                    <dl id="narrow-by-list">
+                        <dt class="odd">Price</dt>
+                        <dd class="odd">
+                            <ol>
+                                <li>
+                                    <a href="#"><span class="price">$100.00</span> - <span class="price">$199.99</span></a> (3)
+                                </li>
+                                <li>
+                                    <a href="#"><span class="price">$200.00</span> - <span class="price">$299.99</span></a> (2)
+                                </li>
+                                <li>
+                                    <a href="#"><span class="price">$300.00</span> and above</a> (1)
+                                </li>
+                            </ol>
+                        </dd>
+                        <dt class="odd">Manufacturer</dt>
+                        <dd class="odd">
+                            <ol>
+                                <li>
+                                    <a href="#">Ferrari</a> (1)
+                                </li>
+                                <li>
+                                    <a href="#">Honda</a> (1)
+                                </li>
+                                <li>
+                                    <a href="#">McLaren Mercedes</a> (2)
+                                </li>
+                                <li>
+                                    <a href="#">Renault</a> (1)
+                                </li>
+                            </ol>
+                        </dd>
+                        <dt class="last odd">Color</dt>
+                        <dd class="last odd">
+                            <ol>
+                                <li>
+                                    <a href="#">black</a> (2)
+                                </li>
+                                <li>
+                                    <a href="#">grey</a> (2)
+                                </li>
+                                <li>
+                                    <a href="#">white</a> (2)
+                                </li>
+                            </ol>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="product_box">
+                    <h3 class="m_1">New Products</h3>
+                    <div class="new_product">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col_1_of_3 span_1_of_3">
+                                <div class="view view-tenth">
+                                    <a asp-area="" asp-controller="Shop" asp-action="Product" asp-route-id=@item.Id>
+                                        <div class="inner_content clearfix">
+                                            <div>
+                                                <img src="~/img/c1.jpg" style=" width: 233px; " />
+                                                <div class="label-product"><span>New</span></div>
+                                                <div class="mask">
+                                                    <h2>Motor Sports</h2>
+                                                    <h3>A wonderful serenity has taken possession of my entire soul</h3>
+                                                    <div class="info">Add to Cart</div>
+                                                </div>
+                                            </div>
+                                            <div class="product_container">
+                                                <p>@item.Mark_car @item.Name_car</p>
+                                                <p class="price1">@item.Price_car</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <h3 class="m_1">Sale Products</h3>
+                <div class="sale_product">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col_1_of_3 span_1_of_3">
+                            <div class="view view-tenth">
+                                <a asp-area="" asp-controller="Shop" asp-action="Product" asp-route-id=@item.Id>
+                                    <div class="inner_content clearfix">
+                                        <div>
+                                            <img src="~/img/c1.jpg" style=" width: 233px; " />
+                                            <div class="label-product"><span>SALE</span></div>
+                                            <div class="mask">
+                                                <h2>Motor Sports</h2>
+                                                <h3>A wonderful serenity has taken possession of my entire soul</h3>
+                                                <div class="info">Add to Cart</div>
+                                            </div>
+                                        </div>
+                                        <div class="product_container">
+                                            <p>@item.Mark_car @item.Name_car</p>
+                                            <p class="price1">@item.Price_car</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
